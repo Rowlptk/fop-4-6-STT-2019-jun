@@ -1,0 +1,29 @@
+body{
+/* background-color:#997799; */
+background-image:url('download.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center center
+
+}
+
+/* element selector */
+h2{
+    color:blue;
+}
+/* id selector */
+#head2{
+    color:red;
+}
+/* class selector */
+.c1{
+    color:green;
+}
+
+h3,h4{
+    color:magenta;
+}
+
+h3 span{
+    color: green;
+}
