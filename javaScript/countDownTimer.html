@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timer</title>
+    <style>
+        div p{
+            text-align:center;
+            font-weight: bold;
+            color:blue;
+        }
+        div{
+            height:50px;
+            width:400px;
+            border:2px solid red;
+            background-color: yellow;
+            border-radius: 10px;
+            margin:40vh auto;
+        }
+        #dayTxt{
+            color:brown;
+        }
+        #hr{
+            color:crimson;
+        }
+    </style>
+</head>
+<body onload="setInterval(startTimer,1000);">
+    <!-- <button >Start Timer</button> -->
+    <div>
+        <p><span id="dayTxt">Day : </span><span id="day"></span> Hrs. : <span id="hr"></span> 
+            Mins. : <span id="min"></span>  Secs. : <span id="sec"></span></p>
+    </div>
+    <script>
+        function startTimer()
+        {
+            var final = new Date(2020,5,25,16,46,0,0);
+            var current = new Date();
+            final = final.getTime();
+            current = current.getTime();
+            var diff = final - current;
+            var day = Math.floor(diff/(1000*60*60*24));
+            var rem = diff%(1000*60*60*24);
+            var hr = Math.floor(rem/(1000*60*60));
+            rem = rem%(1000*60*60);
+            var min = Math.floor(rem/(1000*60));
+            rem = rem%(1000*60);
+            var sec = Math.floor(rem/1000);
+            if(diff >= 0)
+            {
+            document.getElementById('day').innerHTML = day;
+            document.getElementById('day').style.color = "red";
+            document.getElementById('hr').innerHTML = hr;
+            document.getElementById('min').innerHTML = min;
+            document.getElementById('sec').innerHTML = sec;
+            }
+            else{
+                document.getElementById('timer').innerHTML = "Date Expired";
+            }
+        }
+    </script>
+</body>
+</html>

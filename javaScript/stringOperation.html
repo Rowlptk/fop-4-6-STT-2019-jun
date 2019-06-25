@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">This is a very long very non unicode string</p>
+    <!-- <input type="text" id="t1"> -->
+    <button onclick="StrLen();">String?</button>
+    <h2 id="res"></h2>
+    <h2 id="res1"></h2>
+    <script>
+    function StrLen()
+    {
+        var str = document.getElementById('p1').innerHTML;
+        alert(str);
+        document.getElementById('res').innerHTML = "The length of String is "+str.length;
+        document.getElementById('res1').innerHTML = "The index of 'very' is "
+        +str.lastIndexOf("very");
+    };
+    
+    </script>
+</body>
+</html>
