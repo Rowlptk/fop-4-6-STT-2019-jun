@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <span id="loop"></span>
+    <button onclick="loop();">Click</button>
+
+    <script>
+        function loop()
+        {
+        var text = "";
+        // var ary = ['Tony Stark','Thanos','Dr. Bruce','Steve Rodger','Peter Parker']
+        // var x;
+        var i = 10
+        while(i>=1)
+        {
+            text += i+" ";
+            
+            i--;
+        }
+        document.getElementById('loop').innerHTML = text; 
+
+        }
+        // for (x in ary)
+        // {
+        //     text += ary[x]+"<br>";
+        // }
+        // for(i=1;i<=10;i++)
+        // {
+        //     text += i+"<br>";
+        // }
+        document.getElementById('loop').innerHTML = text;
+    </script>
+</body>
+</html>
