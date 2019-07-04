@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="p1"></h1>
+    <button onclick="asgn();">Click</button>
+    <button onclick="goforward();">Go Forward</button>
+    <script>
+        // console.log(window.location.href);
+        // document.getElementById('p1').innerHTML = window.location.href;
+        //document.getElementById('p1').innerHTML = window.location.hostname;
+        // document.getElementById('p1').innerHTML = window.location.pathname;
+        // document.getElementById('p1').innerHTML = window.location.port;
+        document.getElementById('p1').innerHTML = window.location.protocol;
+        function asgn()
+        {
+            window.location.assign('page2.html');
+        } 
+        function goforward()
+        {
+            window.history.forward();
+        }
+    </script>
+</body>
+</html>

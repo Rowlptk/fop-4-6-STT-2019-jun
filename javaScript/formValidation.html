@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    User Name : <input type="text" id="usr">
+    <span id="d1"></span><br><br>
+    Password  : <input type="password" id="pwd">
+    <span id="d1"></span><br>
+    <button onclick="checkVal();">Submit</button>
+    <button onclick="seePassword();" ondblclick = "hidePassword();">Reveal Password</button>
+    <script>
+        function seePassword()
+        {
+            document.getElementById('pwd').type = "text";
+        }
+        function hidePassword()
+        {
+            document.getElementById('pwd').type = "password";
+        }
+        function checkVal()
+        {
+            var str = document.getElementById('usr').value;
+            var str2 = document.getElementById('pwd').value;
+            var patt = /^[A-Z]*$/;
+            var pwdpatt = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+            var result = patt.test(str);
+            var pwdresult = pwdpatt.test(str2);
+            if(result)
+            {
+                document.getElementById('d1').innerHTML = "Valid";
+                document.getElementById('d1').style.color = "green";
+            }
+            else
+            {
+                document.getElementById('d1').innerHTML = "*Invalid!";
+                document.getElementById('d1').style.color = "red";
+            }
+        }
+    
+    </script>
+
+</body>
+</html>
