@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <br><br><br><br><br><br>
+        <button class="btn btn-primary" data-toggle="tooltip" title="This is a tooltip button">
+        Tooltip</button>
+
+        <button class="btn btn-danger" data-toggle="popover" title="This is a popover button"
+        data-content="This is a body of popover">Popover</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle=tooltip]').tooltip();
+            $('[data-toggle=popover]').popover();
+        });
+    </script>
+</body>
+</html>

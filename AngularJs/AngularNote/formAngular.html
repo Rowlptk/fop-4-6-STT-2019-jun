@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+</head>
+<body ng-app="">
+    <form name="meroForm" novalidate>
+        Email : <input type="email" ng-model="email" name="meroEmail" value="meroemail@email.com" required>
+        <span style="color:red" ng-show="meroForm.meroEmail.$invalid && meroForm.meroEmail.$dirty">
+            <span ng-show="meroForm.meroEmail.$error.email">Invalid Email</span>
+            <span ng-show="meroForm.meroEmail.$error.required">Email is required</span>
+        </span>
+            <br>
+        Password : <input type="password" ng-model="pwd" name="meropwd" required>
+        <span style="color:red" ng-show="meroForm.meropwd.$invalid && meroForm.meropwd.$dirty">
+            <span>Password is required</span>
+        </span>
+        <br>
+        <input type="submit" value="submit" name="submit" ng-disabled="meroForm.$invalid">
+    </form>
+</body>
+</html>

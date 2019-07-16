@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <p class="p2">This is a text</p>
+    <p class="p2">This is a p tag</p>
+    <p id="p1">This is a paragraph</p>
+
+    <form action="">
+        username: <input type="text">
+        password: <input type="text">
+    </form>
+
+    <script>
+        $(function(){
+            $('p').on({
+                click: function(){
+                    $(this).css("background-color","red");
+                },
+                dblclick: function(){
+                    $(this).css("color","white");
+                },
+                mouseenter: function(){
+                    $(this).css("font-size","20px");
+                    $('form').hide(1000);
+                },
+                mouseleave: function(){
+                    $(this).css("font-weight","bold");
+                    $('form').show(1000);
+                }
+            });
+        });
+
+
+
+
+
+        // $(document).ready(function(){
+        //     $('form').click(function(){
+        //         $('form').hide(500);
+        //     });
+        // });
+
+
+    </script>
+</body>
+</html>

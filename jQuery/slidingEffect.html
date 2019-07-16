@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width:100%;
+            background-color: tan;
+            border: 2px solid red;
+        }
+        #flip{
+            text-align: center;
+        }
+        #panel{
+            display:none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="flip">Click Me to Slide Down!</div>
+    <div id="panel">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus obcaecati odio 
+            quaerat quam illum laboriosam unde aperiam ullam, sequi, magni est non, vitae ratione 
+            velit? Facere fuga nihil omnis nam!</p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#flip').click(function(){
+                // $('#panel').slideDown();
+                // $('#panel').slideUp();
+                $('#panel').slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>

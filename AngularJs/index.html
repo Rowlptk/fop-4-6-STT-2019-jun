@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular Js</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <style>
+        input.ng-valid{
+            background-color: green;
+        }
+        input.ng-invalid{
+            background-color: red;
+        }
+    </style>
+</head>
+<body ng-app="myApp">
+
+    <div ng-init="mylist = ['desk', 'bench', 'chair', 'table', 'house']">
+        <ol>
+            <li ng-repeat="x in mylist">{{x}}</li>
+        </ol>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <input type="checkbox" ng-model="myCheck">
+    
+    <div ng-include="'page.html'" ng-show="myCheck"></div>
+    <!-- <div ng-include="'page.html'"></div>
+    <div ng-include="'page.html'"></div>
+    <div ng-include="'page.html'"></div>
+    <div ng-include="'page.html'"></div> -->
+
+    <div ng-controller="myCtrl" ng-hide="myCheck">
+        <input type="text" ng-model="ctrlData" required>
+        <h2>{{ctrlData}}</h2>
+    </div>
+
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('myCtrl',function($scope){
+            $scope.ctrlData = "My Control";
+        });
+    </script>
+</body>
+</html>
