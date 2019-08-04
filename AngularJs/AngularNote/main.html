@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular Routing</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+</head>
+<body ng-app="myApp">
+    <a href="#/!">Home</a>
+    <a href="#!form">Form</a>
+    <a href="#!table">Table</a>
+    <a href="#!list">List</a>
+    <div style="border:2px solid red;">
+        <div ng-view></div>
+    </div>
+    <script>
+        var app = angular.module('myApp',["ngRoute"]);
+        app.config(function($routeProvider){
+            $routeProvider
+            .when('/',{
+                templateUrl: 'page0.html'
+            })
+            .when('/form',{
+                templateUrl: 'page1.html'
+            })
+            .when('/table',{
+                templateUrl: 'page2.html'
+            })
+            .when('/list',{
+                templateUrl: 'page3.html'
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+.navbar-default {
+    background-color: cornflowerblue;
+}
+.navbar-default .navbar-brand a{
+    color: whitesmoke;
+}
+.navbar-default .navbar-brand a:hover{
+    text-decoration: none;
+    color: rgb(0, 195, 255);
+}
+.navbar-default .navbar-nav>li>a {
+    color: whitesmoke;
+}
+/* @media only screen and (max-width: 992px) {
+      div a{
+      display: block;
+    }
+  } */
+
+.modal-dialog {
+    width: 30%;
+    margin: auto;
+}
+.modal-content{
+    background-color: green;
+}
